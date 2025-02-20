@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Medium to Freedium",
+  "version": "1.0",
+  "description": "Adds a button to Medium articles to read them on Freedium",
+  "permissions": ["activeTab"],
+  "icons": {
+    "48": "icon.svg"
+  },
+  "action": {
+    "default_icon": "icon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.medium.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
